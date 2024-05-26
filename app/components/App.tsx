@@ -55,6 +55,7 @@ const App: () => JSX.Element = () => {
       let thisCaption = data.channel.alternatives[0].transcript;
 
       console.log("thisCaption", thisCaption);
+      
       if (thisCaption !== "") {
         console.log('thisCaption !== ""', thisCaption);
         setCaption(thisCaption);

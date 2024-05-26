@@ -14,6 +14,8 @@ const Home = () => {
         {/* height 4rem */}
         <div className="bg-gradient-to-b from-black/50 to-black/10 backdrop-blur-[2px] h-[4rem] flex items-center">
           <header className="mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8 flex items-center justify-between">
+            
+            {/*
             <div>
               <a className="flex items-center" href="/">
                 <Image
@@ -26,6 +28,7 @@ const Home = () => {
                 />
               </a>
             </div>
+
             <div className="flex items-center gap-6 text-sm">
               <span className="mt-1">
                 <GitHubButton
@@ -49,6 +52,8 @@ const Home = () => {
                 </a>
               </span>
             </div>
+            */}
+
           </header>
         </div>
 
@@ -60,6 +65,7 @@ const Home = () => {
         {/* height 4rem */}
         <div className="bg-black/80 h-[4rem] flex items-center absolute w-full">
           <footer className="mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8 flex items-center justify-center gap-4 md:text-xl font-inter text-[#8a8a8e]">
+            {/*
             <span className="text-base text-[#4e4e52]">share it</span>
             <a
               href="#"
@@ -116,6 +122,7 @@ const Home = () => {
             >
               contact us
             </a>
+            */}
           </footer>
         </div>
       </div>
