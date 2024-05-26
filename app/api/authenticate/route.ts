@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
   let { result: projectsResult, error: projectsError } =
     await deepgram.manage.getProjects();
 
-  console.log("projectsResult", projectsResult);
+  //console.log("projectsResult", projectsResult);
 
   if (projectsError) {
     return NextResponse.json(projectsError);
@@ -40,15 +40,18 @@ export async function GET(request: NextRequest) {
   }
 
   let { result: newKeyResult, error: newKeyError } =
-    await deepgram.manage.createProjectKey(project.project_id, {
-      comment: "Temporary API key",
-      scopes: ["usage:write"],
-      tags: ["next.js"],
-      time_to_live_in_seconds: 60,
-    });
+    await deepgram.manage.createProjectKey(
+      project.project_id,
+      {
+        comment: "Temporary API key",
+        scopes: ["usage:write"],
+        tags: ["next.js"],
+        time_to_live_in_seconds: 60,
+      }
+    );
 
-  console.log("newKeyResult", newKeyResult);
-  console.log("newKeyError", newKeyError);
+  //console.log("newKeyResult", newKeyResult);
+  //console.log("newKeyError", newKeyError);
 
   if (newKeyError) {
     return NextResponse.json(newKeyError);

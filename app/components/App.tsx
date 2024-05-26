@@ -7,11 +7,13 @@ import {
   LiveTranscriptionEvents,
   useDeepgram,
 } from "../context/DeepgramContextProvider";
+
 import {
   MicrophoneEvents,
   MicrophoneState,
   useMicrophone,
 } from "../context/MicrophoneContextProvider";
+
 import Visualizer from "./Visualizer";
 
 const App: () => JSX.Element = () => {
@@ -19,8 +21,10 @@ const App: () => JSX.Element = () => {
     "Powered by Famnote"
   );
   const { connection, connectToDeepgram, connectionState } = useDeepgram();
+
   const { setupMicrophone, microphone, startMicrophone, microphoneState } =
     useMicrophone();
+    
   const captionTimeout = useRef<any>();
   const keepAliveInterval = useRef<any>();
 
@@ -57,7 +61,9 @@ const App: () => JSX.Element = () => {
       console.log("thisCaption", thisCaption);
 
       if (thisCaption !== "") {
-        console.log('thisCaption !== ""', thisCaption);
+        
+        console.log('=========>', thisCaption);
+
         setCaption(thisCaption);
       }
 
