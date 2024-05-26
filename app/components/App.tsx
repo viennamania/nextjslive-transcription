@@ -24,7 +24,7 @@ const App: () => JSX.Element = () => {
 
   const { setupMicrophone, microphone, startMicrophone, microphoneState } =
     useMicrophone();
-    
+
   const captionTimeout = useRef<any>();
   const keepAliveInterval = useRef<any>();
 
@@ -36,6 +36,10 @@ const App: () => JSX.Element = () => {
   useEffect(() => {
     if (microphoneState === MicrophoneState.Ready) {
       connectToDeepgram({
+        
+        //language: "en-US",
+        language: "ko-KR",
+
         model: "nova-2",
         interim_results: true,
         smart_format: true,
@@ -119,12 +123,20 @@ const App: () => JSX.Element = () => {
       <div className="flex h-full antialiased">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
           <div className="flex flex-col flex-auto h-full">
+            
             {/* height 100% minus 8rem */}
             <div className="relative w-full h-full">
-              {microphone && <Visualizer microphone={microphone} />}
+              
+              {microphone &&
+                <Visualizer microphone={microphone} />
+              }
+              
               <div className="absolute bottom-[8rem]  inset-x-0 max-w-4xl mx-auto text-center">
-                {caption && <span className="bg-black/70 p-8">{caption}</span>}
+                {caption &&
+                  <span className=" p-8 mb-56 text-white text-4xl font-bold">{caption}</span>
+                }
               </div>
+
             </div>
           </div>
         </div>
