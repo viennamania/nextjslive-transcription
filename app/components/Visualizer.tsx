@@ -52,6 +52,7 @@ const Visualizer = ({ microphone }: { microphone: MediaRecorder }) => {
 
     const barWidth = 10;
     let x = 0;
+    
     const startColor = [19, 239, 147];
     const endColor = [20, 154, 251];
 
@@ -63,6 +64,9 @@ const Visualizer = ({ microphone }: { microphone: MediaRecorder }) => {
       const color = interpolateColor(startColor, endColor, interpolationFactor);
 
       context.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.1)`;
+
+
+
       context.fillRect(x, height - barHeight, barWidth, barHeight);
       x += barWidth;
     }

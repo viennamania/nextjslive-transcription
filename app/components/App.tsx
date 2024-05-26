@@ -16,7 +16,7 @@ import Visualizer from "./Visualizer";
 
 const App: () => JSX.Element = () => {
   const [caption, setCaption] = useState<string | undefined>(
-    "Powered by Deepgram"
+    "Powered by Famnote"
   );
   const { connection, connectToDeepgram, connectionState } = useDeepgram();
   const { setupMicrophone, microphone, startMicrophone, microphoneState } =
@@ -55,7 +55,7 @@ const App: () => JSX.Element = () => {
       let thisCaption = data.channel.alternatives[0].transcript;
 
       console.log("thisCaption", thisCaption);
-      
+
       if (thisCaption !== "") {
         console.log('thisCaption !== ""', thisCaption);
         setCaption(thisCaption);
