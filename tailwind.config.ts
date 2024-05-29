@@ -7,6 +7,24 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
+
+
+
+  
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1920px',
+      '4xl': '2560px', // only need to control product grid mode in ultra 4k device
+    },
+      
+
+
     extend: {
       animation: {
         // Bounces 5 times 1s equals 5 seconds
@@ -44,6 +62,7 @@ const config: Config = {
         inter: ["Inter", "Arial", "sans serif"],
       },
     },
+
   },
 };
 export default config;

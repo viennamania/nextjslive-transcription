@@ -134,7 +134,7 @@ const App: () => JSX.Element = () => {
               
               <div className="absolute top-[8rem] inset-x-0 max-w-4xl mx-auto text-center">
                 {caption &&
-                  <span className=" p-8 mb-72 text-white text-9xl font-bold">
+                  <span className=" p-8 mb-72 text-white text-6xl xl:text-9xl font-bold">
                     {caption}
                   </span>
                 }
