@@ -58,6 +58,7 @@ export async function GET(request: NextRequest) {
   }
 
   const response = NextResponse.json({ ...newKeyResult, url });
+  
   response.headers.set("Surrogate-Control", "no-store");
   response.headers.set(
     "Cache-Control",

@@ -15,6 +15,7 @@ const interpolateColor = (
 };
 
 const Visualizer = ({ microphone }: { microphone: MediaRecorder }) => {
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const audioContext = new (window.AudioContext || window.webkitAudioContext)();
   const analyser = audioContext.createAnalyser();
@@ -63,12 +64,14 @@ const Visualizer = ({ microphone }: { microphone: MediaRecorder }) => {
 
       const color = interpolateColor(startColor, endColor, interpolationFactor);
 
-      context.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.1)`;
+      context.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.3)`;
 
 
 
       context.fillRect(x, height - barHeight, barWidth, barHeight);
+
       x += barWidth;
+      
     }
   };
 

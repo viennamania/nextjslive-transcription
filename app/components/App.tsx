@@ -122,6 +122,7 @@ const App: () => JSX.Element = () => {
     <>
       <div className="flex h-full antialiased">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
+          
           <div className="flex flex-col flex-auto h-full">
             
             {/* height 100% minus 8rem */}
@@ -131,14 +132,18 @@ const App: () => JSX.Element = () => {
                 <Visualizer microphone={microphone} />
               }
               
-              <div className="absolute bottom-[8rem]  inset-x-0 max-w-4xl mx-auto text-center">
+              <div className="absolute top-[8rem] inset-x-0 max-w-4xl mx-auto text-center">
                 {caption &&
-                  <span className=" p-8 mb-56 text-white text-4xl font-bold">{caption}</span>
+                  <span className=" p-8 mb-72 text-white text-9xl font-bold">
+                    {caption}
+                  </span>
                 }
               </div>
 
             </div>
+
           </div>
+
         </div>
       </div>
     </>
